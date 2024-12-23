@@ -4,7 +4,9 @@ $name = '藤本';
 echo '私の名前は「' . $name . '」です。';
 
 // Q2 四則演算
-
+$sum = 4*5;
+var_dump($sum);
+var_dump($sum / 2);
 
 // Q3 日付操作
 
