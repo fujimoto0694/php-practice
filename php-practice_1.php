@@ -49,7 +49,22 @@ foreach($prefecture as $value){
 }
 
 // Q8 連想配列-2
+$prefecture = [
+  '東京都' => '新宿区',
+  '神奈川県' => '横浜市',
+  '千葉県' => '千葉市',
+  '埼玉県' => 'さいたま市',
+  '栃木県' => '宇都宮市',
+  '群馬県' => '前橋市',
+  '茨城県' => '水戸市',
+];
 
+
+foreach ($prefecture as $key => $value) {
+  if ($key =='埼玉県' && $value =='さいたま市') {
+  echo $key . 'の県庁所在地は、' .$value . 'です。';
+  } else continue;
+}
 
 // Q9 連想配列-3
 
