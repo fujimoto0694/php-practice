@@ -115,6 +115,29 @@ $string = distinguishNum(24);
 echo $string;
 
 // Q13 関数とswitch文
+function evaluateGrade($grade) {
+switch($grade) {
+  case 'A':
+  case 'B':
+  return '合格です。' . "\n";
+  break;
 
+  case 'C':
+  return '合格ですが追加課題があります。' . "\n";
+  break;
+
+  case 'D':
+  return '不合格です。' . "\n";
+  break;
+
+  default:
+  return '判定不明です。講師に問い合わせてください。' . "\n";
+  break;
+}
+}
+$string = evaluateGrade('A');
+echo $string;
+$string = evaluateGrade('E');
+echo $string;
 
 ?>
