@@ -102,7 +102,17 @@ echo '税抜き価格は' . $price . '円です。税込価格は' . $taxInPrice
 
 
 // Q12 関数とif文
-
+function distinguishNum($num) {
+  if ($num % 2 === 1) {
+    return $num . 'は奇数です。' . "\n";
+  } else {
+    return $num . 'は偶数です。' . "\n";
+  }
+}
+$string = distinguishNum(11);
+echo $string;
+$string = distinguishNum(24);
+echo $string;
 
 // Q13 関数とswitch文
 
