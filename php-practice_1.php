@@ -92,6 +92,13 @@ hello('金谷');
 hello('安藤');
 
 // Q11 関数-2
+function calcTaxInPrice($price) {
+  $taxInPrice = $price * 1.1;
+  return $taxInPrice;
+}
+$price = 1000;
+$taxInPrice = calcTaxInPrice($price);
+echo '税抜き価格は' . $price . '円です。税込価格は' . $taxInPrice . '円です。';
 
 
 // Q12 関数とif文
