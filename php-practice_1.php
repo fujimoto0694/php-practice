@@ -5,8 +5,8 @@ echo '私の名前は「' . $name . '」です。';
 
 // Q2 四則演算
 $sum = 4*5;
-var_dump($sum);
-var_dump($sum / 2);
+echo $sum . "\n";
+echo $sum / 2;
 
 // Q3 日付操作
 date_default_timezone_set('Asia/Tokyo');
@@ -32,7 +32,7 @@ echo $message;
 
 // Q6 配列
 $prefecture = ['東京都', '神奈川県', '栃木県', '千葉県', '埼玉県', '群馬県', '茨城県'];
-echo ' '. $prefecture[2] .'と'. $prefecture[3] .'は関東地方の都道府県です。';
+echo $prefecture[2] .'と'. $prefecture[3] .'は関東地方の都道府県です。';
 
 // Q7 連想配列-1
 $prefecture = [
@@ -44,7 +44,7 @@ $prefecture = [
   '群馬県' => '前橋市',
   '茨城県' => '水戸市',
 ];
-foreach($prefecture as $value){
+foreach($prefecture as $key => $value){
   echo $value . "\n";
 }
 
@@ -61,28 +61,28 @@ $prefecture = [
 foreach ($prefecture as $key => $value) {
   if ($key =='埼玉県' && $value =='さいたま市') {
   echo $key . 'の県庁所在地は、' .$value . 'です。';
-  } else continue;
+  };
 }
 
 // Q9 連想配列-3
-$prefecture = [
-  '東京都' => '新宿区',
-  '神奈川県' => '横浜市',
-  '千葉県' => '千葉市',
-  '埼玉県' => 'さいたま市',
-  '栃木県' => '宇都宮市',
-  '群馬県' => '前橋市',
-  '茨城県' => '水戸市',
-  '愛知県' => '名古屋市',
-  '大阪府' => '大阪市',
-];
-foreach ($prefecture as $key => $value) {
-  if ($key == '東京都' || $key == '神奈川県' || $key == '千葉県' || $key == '埼玉県' || $key == '栃木県' || $key == '群馬県' || $key == '茨城県') {
-    echo $key . 'の県庁所在地は、' . $value . 'です。' . "\n";
-  } else {
-    echo $key . 'は関東地方ではありません。' . "\n";
-  }
-  }
+  $prefecture = [
+    '東京都' => '新宿区',
+    '神奈川県' => '横浜市',
+    '千葉県' => '千葉市',
+    '埼玉県' => 'さいたま市',
+    '栃木県' => '宇都宮市',
+    '群馬県' => '前橋市',
+    '茨城県' => '水戸市',
+    '愛知県' => '名古屋市',
+    '大阪府' => '大阪市',
+  ];
+  foreach ($prefecture as $key => $value) {
+    if ($key == '愛知県' || $key == '大阪府') {
+      echo $key . 'は関東地方ではありません。' . "\n";
+    } else {
+      echo $key . 'の県庁所在地は、' . $value . 'です。' . "\n";
+    }
+    }
 
 // Q10 関数-1
 function hello($name) {
@@ -93,8 +93,7 @@ hello('安藤');
 
 // Q11 関数-2
 function calcTaxInPrice($price) {
-  $taxInPrice = $price * 1.1;
-  return $taxInPrice;
+  return $price * 1.1;
 }
 $price = 1000;
 $taxInPrice = calcTaxInPrice($price);
@@ -109,7 +108,7 @@ function distinguishNum($num) {
     return $num . 'は偶数です。' . "\n";
   }
 }
-$string = distinguishNum(11);
+kk = distinguishNum(11);
 echo $string;
 $string = distinguishNum(24);
 echo $string;
