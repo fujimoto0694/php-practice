@@ -13,7 +13,7 @@ date_default_timezone_set('Asia/Tokyo');
 $today = date('Y年m月d年 H時i分s秒');
 echo '現在時刻は、' . $today . 'です。';
 
-// Q4 条件分岐-1 if文
+// Q4 条件分岐-1 if文　if文一つ
 $device = 'mac';
 if ($device == 'windows') {
   echo '使用OSは、windowsです。';
@@ -82,6 +82,7 @@ foreach ($prefecture as $key => $value) {
     } else {
       echo $key . 'の県庁所在地は、' . $value . 'です。' . "\n";
     }
+  
     }
 
 // Q10 関数-1
@@ -108,7 +109,7 @@ function distinguishNum($num) {
     return $num . 'は偶数です。' . "\n";
   }
 }
-kk = distinguishNum(11);
+$string = distinguishNum(11);
 echo $string;
 $string = distinguishNum(24);
 echo $string;
